@@ -1,0 +1,29 @@
+
+        html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: url("images/01.png") no-repeat center center;
+    background-size: cover;   /* fills screen */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.image-bottom {
+    margin-top: 20px; /* space between 2.png and 3.png */
+}
+
+    
