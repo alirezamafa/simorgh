@@ -36,53 +36,37 @@
   justify-content: center;
 }
 
-.btn-container {
-  background-color: #e3f1ff;       /* light blue container */
-  padding-top: 35px;               /* top padding to show lower half of circle */
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 90px;                     /* container width */
-  position: relative;
-}
-
-/* Push circle up so only lower half is in container */
-.btn-container .circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #0e77d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  position: absolute;
-  top: -35px;        /* move half circle out of container */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-container .circle img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
 .btn {
+  
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Pinar', system-ui, sans-serif;
   gap: 8px;
-  margin-top: 40px; /* space for circle */
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: #0e77d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
 }
 
 .btn span {
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
 }
 
 .btn:hover .circle {
@@ -91,6 +75,44 @@
 }
 
 
+.photo-roll {
+  width: 90%;
+  margin: 24px auto;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;       /* allows horizontal scroll if needed */
+  padding-bottom: 8px;    /* optional padding */
+}
+
+.photo-roll::-webkit-scrollbar {
+  height: 6px;             /* thin scrollbar */
+}
+
+.photo-roll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.photo-item {
+  flex: 0 0 auto;          /* prevent shrinking */
+  width: 150px;             /* width of each photo */
+  height: 100px;            /* height of each photo */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* image fills container */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-item img:hover {
+  transform: scale(1.05);  /* subtle zoom on hover */
+}
 
 
 
@@ -295,6 +317,15 @@
     </a>
   </div>
 </div>
+<div class="photo-roll">
+  <div class="photo-item">
+    <img src="images/08.png" alt="Photo 1">
+  </div>
+  <div class="photo-item">
+    <img src="images/09.png" alt="Photo 2">
+  </div>
+  <!-- Add more images if needed -->
+</div>
 
 
   <script>
@@ -307,6 +338,7 @@
   </script>
 </body>
 </html>
+
 
 
 
