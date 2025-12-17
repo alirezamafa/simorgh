@@ -11,6 +11,23 @@
   display: flex;
   gap: 12px;
 }
+    /* Pinar Regular */
+@font-face {
+  font-family: 'Pinar';
+  src: url('fonts/Pinar-Regular.woff2') format('woff2'),
+       url('fonts/Pinar-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Pinar FD ExtraBold */
+@font-face {
+  font-family: 'Pinar-FD';
+  src: url('fonts/Pinar-FD-ExtraBold.woff2') format('woff2'),
+       url('fonts/Pinar-FD-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
 
 .btn {
   flex: 1;
@@ -31,7 +48,7 @@
 
     body {
       margin: 0;
-      font-family: "Vazirmatn", "IRANSans", system-ui, sans-serif;
+      font-family: 'Pinar', system-ui, sans-serif;
       background: #f5f5f5;
     }
 
@@ -41,6 +58,7 @@
       color: #fff;
       margin: 12px auto;        
       padding: 14px 16px;
+      font-family: 'Pinar-FD', system-ui, sans-serif;
       border-radius: 20px;    
       width: 90%;              
       display: flex;
@@ -208,6 +226,7 @@
   </script>
 </body>
 </html>
+
 
 
 
