@@ -28,6 +28,51 @@
   font-weight: 800;
   font-style: normal;
 }
+.buttons {
+  width: 90%;
+  margin: 16px auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Pinar', system-ui, sans-serif;
+  gap: 8px;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0F1EF2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.btn span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn:hover .circle {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
 
 .btn {
   flex: 1;
@@ -211,8 +256,10 @@
   </header>
 <div class="buttons">
   <a href="page1.html" class="btn">
-    <img src="images/001.png" alt="">
-    <span>مجوز ها</span>
+    <div class="circle">
+      <img src="images/001.png" alt="">
+    </div>
+    <span>مجوز ها </span>
   </a>
   <a href="page1.html" class="btn"> آزمون ها</a>
   <a href="page1.html" class="btn">  نوبت‌دهی</a>
@@ -229,6 +276,7 @@
   </script>
 </body>
 </html>
+
 
 
 
