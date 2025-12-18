@@ -158,25 +158,27 @@
 
 
 .photo-roll {
-  width: 100%; /* full width of viewport */
-  margin-top: -10px;
-  margin: 0; /* remove margin around the roll */
+  width: 100%;
+  margin: -10px auto 20px auto; /* adjust as needed */
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;   
+  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;           
-  padding: 0; /* remove padding */
+  scrollbar-width: none;
+  padding: 0;
+
+  border: 4px solid #fff; /* white border */
+  border-radius: 10px;    /* rounded corners */
+  box-sizing: border-box; /* include border in width */
 }
 
 .photo-item {
-  flex: 0 0 100%; /* take full width of container */
+  flex: 0 0 100%; /* full width of container */
   width: 100%;
-  height: 200px; 
-  scroll-snap-align: start;       
-  border-radius: 10px; /* optional: remove rounding if you want full-bleed image */
+  height: 200px;
+  scroll-snap-align: start;
+  border-radius: 10px; /* matches container for smooth edges */
   overflow: hidden;
-  box-shadow: none; /* remove shadow if you want no white space around */
 }
 
 .photo-item img {
@@ -477,6 +479,7 @@
   </script>
 </body>
 </html>
+
 
 
 
