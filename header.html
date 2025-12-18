@@ -163,27 +163,27 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
-  width: 100%;
-  border: 6px solid #fff; /* white border */
-  border-radius: 10px;    /* rounded corners */
-  box-sizing: border-box; /* include border in width */
-  gap: 0;                  /* remove gaps */
-  padding: 0;              /* remove padding */
-  margin: 20px auto;       /* adjust spacing from other elements */
+  width: 90%;                 /* keep it aligned with other sections */
+  margin: 20px auto;
+  border: 4px solid #fff;     /* white border */
+  border-radius: 10px;        /* rounded corners */
+  box-sizing: border-box;     /* include border in width */
+  padding: 0;                 /* remove internal padding */
+  gap: 0;                     /* no gap between photos */
 }
 
 .photo-item {
-  flex: 0 0 100%;         /* full width of container */
+  flex: 0 0 100%;             /* take full width of container */
   scroll-snap-align: start;
-  border-radius: 10px;    /* match container radius */
-  overflow: hidden;       /* make images respect border-radius */
-  margin: 0;              /* remove gaps */
+  border-radius: 10px;        /* match container radius */
+  overflow: hidden;           /* ensure images respect border radius */
+  margin: 0;                  /* remove gaps */
 }
 
 .photo-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* fill container fully */
+  object-fit: cover;          /* fill container fully */
   display: block;
 }
 
@@ -478,6 +478,7 @@
   </script>
 </body>
 </html>
+
 
 
 
