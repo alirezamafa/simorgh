@@ -47,9 +47,7 @@
   margin-top:-23px;  /* distance to next section */
   padding: 5px 0;      /* inner vertical padding */
 } 
-  photo-roll {
-  margin-top: 5px; /* reduce space above photo roll */
-}
+ 
 .buttons {
   width: 90%;
   
@@ -186,7 +184,7 @@
   -webkit-overflow-scrolling: touch;
 
   width: 100%;                 /* keep it aligned with other sections */
-  margin: 20px auto;
+  margin: 5px auto;
   border-radius: 10px;        /* rounded corners */
   box-sizing: border-box;     /* include border in width */
   padding: 0;                 /* remove internal padding */
@@ -492,35 +490,30 @@
 </div>
   </div>
 
- <div class="photo-roll" id="photoRoll">
-  <div class="photo-item"><img src="images/08.png" alt="Photo 1"></div>
-  <div class="photo-item"><img src="images/09.png" alt="Photo 2"></div>
-  <div class="photo-item"><img src="images/18.png" alt="Photo 3"></div>
-  <div class="photo-item"><img src="images/19.png" alt="Photo 4"></div>
-</div>
 
 <script>
-const photoRoll = document.getElementById('photoRoll');
+const photoRoll = document.querySelector('.photo-roll');
 const photos = Array.from(photoRoll.children);
 
-// Duplicate photos to allow seamless scrolling
+// Clone photos to enable seamless infinite scroll
 photos.forEach(photo => {
   const clone = photo.cloneNode(true);
   photoRoll.appendChild(clone);
 });
 
 let scrollAmount = 0;
-const speed = 1; // pixels per frame
+const speed = 1; // pixels per frame, adjust for speed
 
 function scrollPhotos() {
   scrollAmount += speed;
-  
+
+  // Reset scroll when reaching halfway (original photos)
   if(scrollAmount >= photoRoll.scrollWidth / 2) {
-    // reset to start to create infinite loop
     scrollAmount = 0;
   }
-  
+
   photoRoll.scrollLeft = scrollAmount;
+
   requestAnimationFrame(scrollPhotos);
 }
 
@@ -528,8 +521,11 @@ scrollPhotos();
 </script>
 
 
+
+
 </body>
 </html>
+
 
 
 
