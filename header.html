@@ -316,7 +316,35 @@
     }
 
 
-    
+    .special-header {
+  background-color: #e3f1ff;
+  color: #000;
+  margin: 10px auto 0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Pinar-FD', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+
+.special-info {
+  flex: 1;
+  text-align: right;
+}
+
+
+.special-avatar img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
 
     .phone {
       text-align: left;
@@ -490,12 +518,18 @@
 </div>
   </div>
 
- <div class="info">
-      <div class="name">خدمات اختصاصی سیمرغ</div>
-      
-       
-      
-    </div>
+ <div class="special-header">
+  <!-- متن (سمت راست) -->
+  <div class="special-info">
+    خدمات اختصاصی سیمرغ
+  </div>
+
+  <!-- عکس (سمت چپ) -->
+  <div class="special-avatar">
+    <img src="images/rocket.png" alt="rocket">
+  </div>
+</div>
+
 
 
 
@@ -505,6 +539,7 @@
 
 </body>
 </html>
+
 
 
 
