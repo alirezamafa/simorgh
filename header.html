@@ -184,7 +184,7 @@
   -webkit-overflow-scrolling: touch;
 
   width: 100%;                 /* keep it aligned with other sections */
-  margin: 5px auto;
+  margin-top:-20px;
   border-radius: 10px;        /* rounded corners */
   box-sizing: border-box;     /* include border in width */
   padding: 0;                 /* remove internal padding */
@@ -247,7 +247,7 @@
 
     
     .header {
-  background-color: #0e77d9; 
+  background-color: #000cf7; 
   color: #fff;
   margin: 13px auto 0; 
   padding: 4px 16px;  /* smaller top/bottom padding */
@@ -491,40 +491,14 @@
   </div>
 
 
-<script>
-const photoRoll = document.querySelector('.photo-roll');
-const photos = Array.from(photoRoll.children);
 
-// Clone photos to enable seamless infinite scroll
-photos.forEach(photo => {
-  const clone = photo.cloneNode(true);
-  photoRoll.appendChild(clone);
-});
-
-let scrollAmount = 0;
-const speed = 1; // pixels per frame, adjust for speed
-
-function scrollPhotos() {
-  scrollAmount += speed;
-
-  // Reset scroll when reaching halfway (original photos)
-  if(scrollAmount >= photoRoll.scrollWidth / 2) {
-    scrollAmount = 0;
-  }
-
-  photoRoll.scrollLeft = scrollAmount;
-
-  requestAnimationFrame(scrollPhotos);
-}
-
-scrollPhotos();
-</script>
 
 
 
 
 </body>
 </html>
+
 
 
 
