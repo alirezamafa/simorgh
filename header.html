@@ -20,7 +20,7 @@
   font-style: normal;
 }
 
-/* Pinar FD ExtraBold */
+
 @font-face {
   font-family: 'Pinar-FD';
   src: url('fonts/Pinar-FD-ExtraBold.woff2') format('woff2'),
@@ -490,35 +490,41 @@
   </div>
 
   <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('active');
-      document.getElementById('overlay').classList.toggle('active');
-    }
-
-    document.getElementById('overlay').onclick = toggleSidebar;
-  </script>
-  <script>
 const photoRoll = document.querySelector('.photo-roll');
+const photos = Array.from(photoRoll.children);
+const totalPhotos = photos.length;
 
-function loopPhotos() {
-  const first = photoRoll.firstElementChild.cloneNode(true);
-  photoRoll.appendChild(first);
-}
+// Clone first and last photo for seamless looping
+const firstClone = photos[0].cloneNode(true);
+const lastClone = photos[totalPhotos - 1].cloneNode(true);
 
-// Automatically scroll and loop
-let scrollAmount = 0;
-setInterval(() => {
-  scrollAmount += photoRoll.offsetWidth; // scroll full width
-  if(scrollAmount >= photoRoll.scrollWidth) {
-    scrollAmount = 0; // reset to start
-    photoRoll.scrollTo({ left: 0, behavior: 'instant' });
-  } else {
-    photoRoll.scrollBy({ left: photoRoll.offsetWidth, behavior: 'smooth' });
+photoRoll.appendChild(firstClone);
+photoRoll.insertBefore(lastClone, photos[0]);
+
+// Adjust initial scroll to show the actual first photo
+photoRoll.scrollLeft = photoRoll.children[1].offsetLeft;
+
+// Listen for scroll end
+photoRoll.addEventListener('scroll', () => {
+  const scrollLeft = photoRoll.scrollLeft;
+  const firstPhoto = photoRoll.children[1];
+  const lastPhoto = photoRoll.children[totalPhotos];
+
+  // If scrolled to clone of first photo
+  if (scrollLeft >= lastPhoto.offsetLeft) {
+    photoRoll.scrollLeft = firstPhoto.offsetLeft;
   }
-}, 3000); // every 3 seconds
+
+  // If scrolled to clone of last photo
+  if (scrollLeft <= 0) {
+    photoRoll.scrollLeft = lastPhoto.offsetLeft;
+  }
+});
 </script>
+
 </body>
 </html>
+
 
 
 
