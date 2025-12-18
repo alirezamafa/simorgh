@@ -343,11 +343,13 @@
 
 
 .special-avatar img {
-  position: absolute;   /* 🔥 خارج از layout */
-  left: 10px;           /* سمت چپ bar */
-  bottom: -12px;        /* کمی بیرون‌زده از bar */
-  width: 90px;          /* 🔺 اینجا سایز را بزرگ کن */
-  height: auto;
+  position: absolute;
+  left: 10px;
+  bottom: -12px;
+
+  width: 120px;      /* ✅ عرض ثابت */
+  height: 120px;     /* ✅ ارتفاع ثابت */
+
   object-fit: contain;
   pointer-events: none;
 }
@@ -535,6 +537,7 @@
 
 </body>
 </html>
+
 
 
 
