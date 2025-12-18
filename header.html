@@ -33,7 +33,11 @@
   padding: 10px 0;      /* smaller vertical padding */
 }
 
-/* Wrapper for buttons sections */
+.buttons.half-bg {
+  margin-bottom: 0; 
+  padding-bottom: 0;
+}
+
 
 .buttons.half-bg1 {
   margin-top:-15px;  /* distance to next section */
@@ -43,9 +47,8 @@
   margin-top:-23px;  /* distance to next section */
   padding: 5px 0;      /* inner vertical padding */
 } 
-    .photo-roll {
-  margin-top: -30px ;    /* distance to sections above/below */
-      padding: 5px 0;
+  photo-roll {
+  margin-top: 5px; /* reduce space above photo roll */
 }
 .buttons {
   width: 90%;
@@ -494,8 +497,29 @@
 
     document.getElementById('overlay').onclick = toggleSidebar;
   </script>
+  <script>
+const photoRoll = document.querySelector('.photo-roll');
+
+function loopPhotos() {
+  const first = photoRoll.firstElementChild.cloneNode(true);
+  photoRoll.appendChild(first);
+}
+
+// Automatically scroll and loop
+let scrollAmount = 0;
+setInterval(() => {
+  scrollAmount += photoRoll.offsetWidth; // scroll full width
+  if(scrollAmount >= photoRoll.scrollWidth) {
+    scrollAmount = 0; // reset to start
+    photoRoll.scrollTo({ left: 0, behavior: 'instant' });
+  } else {
+    photoRoll.scrollBy({ left: photoRoll.offsetWidth, behavior: 'smooth' });
+  }
+}, 3000); // every 3 seconds
+</script>
 </body>
 </html>
+
 
 
 
