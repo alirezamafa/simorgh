@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>به زودی</title>
   <style>
     body {
@@ -16,27 +17,48 @@
 
     .box {
       background: #fff;
-      padding: 40px;
+      padding: 30px 20px;
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
     }
 
     h1 {
-      margin: 0 0 10px;
+      margin: 0 0 15px;
       color: #0F1EF2;
+      font-size: 24px;
     }
 
     p {
       color: #555;
-      font-size: 14px;
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .back-btn {
+      background: #0F1EF2;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: #0d1ccc;
     }
   </style>
 </head>
 <body>
   <div class="box">
     <h1>به زودی</h1>
-    <p>این بخش در حال توسعه است</p>
+    <p>این سامانه در حال توسعه است و بزودی در دسترس خواهد بود</p>
+    <button class="back-btn" onclick="window.location.href='header.html'">بازگشت</button>
   </div>
 </body>
 </html>
