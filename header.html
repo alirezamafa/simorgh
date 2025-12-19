@@ -509,20 +509,28 @@ html, body {
   padding: 0;
   margin: 20px 0 0;
 }
-
+sidebar-menu li:first-child .sidebar-img {
+  width: 32px;   /* bigger width */
+  height: 32px;  /* bigger height */
+}
 .sidebar-menu li {
   margin-bottom: 14px;
 }
-.sidebar-menu a {
-  display: flex;          /* :fire: puts image + text in same row */
-  align-items: center;    /* :fire: vertical center */
-  gap: 12px;              /* space between icon and text */
-  white-space: nowrap;    /* :fire: prevents text breaking to next line */
-}
+
+    .sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+    }
     .sidebar-menu span {
   font-size: 14px;
   line-height: 1;
 }
+    .sidebar-menu .sidebar-img {
+  flex-shrink: 0;
+  margin-bottom: -2px; /* tweak this value to perfectly align with text */
+    }
 
 .sidebar-img {
   width: 22px;
@@ -794,6 +802,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
