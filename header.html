@@ -228,7 +228,7 @@ html, body {
 .special-buttons .buttons {
   grid-template-columns: repeat(3, 1fr);
   padding-right: 35px;   /* your existing right space */
-  gap: 32px;             /* 🔼 increase distance between buttons */
+  gap: 32px;             
 }
 
 
@@ -412,12 +412,12 @@ html, body {
 /* عکس زیرین */
 .rocket-bg {
   position: absolute;
-  left:2px;           
+  left:-10px;           
   top: 50%;
   transform: translateY(-50%);
 
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
 
   z-index: 0;         
   pointer-events: none;
@@ -426,12 +426,12 @@ html, body {
 /* راکت (رویی) */
 .rocket {
   position: absolute;
-  left: 10px;
+  left: -10px;
   top: 50%;
   transform: translateY(-50%);
 
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
 
   z-index: 1;          /* 🔼 روی عکس زیر */
   pointer-events: none;
@@ -651,6 +651,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
