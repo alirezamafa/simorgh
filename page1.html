@@ -14,19 +14,24 @@
       align-items: center;
       text-align: center;
       min-height: 100vh;
+      padding-top:6px;
     }
+
 
     .top-image {
-      width: 240px;      /* adjust as needed */
-      height: auto;
-      margin: 20px 0 10px 0;  /* distance from top and text */
-    }
+  width: 240px;
+  height: auto;
+  margin: 8px 0 4px 0;   /* 🔽 reduced top & bottom spacing */
+}
+
 
     h1 {
-      margin: 0 0 10px;
-      color: #0F1EF2;
-      font-size: 24px;
-    }
+  margin: 0 0 6px;      /* 🔽 tighter spacing */
+  color: #0F1EF2;
+  font-size: 24px;
+}
+
+  
 
     p {
       color: #555;
@@ -51,13 +56,16 @@
       background: #0d1ccc;
     }
 
+
     .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-    }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 🔥 important */
+  width: 100%;
+}
+
   </style>
 </head>
 <body>
