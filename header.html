@@ -87,17 +87,20 @@
   position: relative;
   z-index: 1;
 }
+
     .buttons.half-bg::before {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0px;
+  transform: translateX(-50%);
   width: 100%;
-  height: 55%;
+  height: 46%;
   background: #e3f1ff;
   border-radius: 20px;
   z-index: 0;
 }
+
 
     .buttons.half-bg1::before {
   content: "";
@@ -644,6 +647,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
