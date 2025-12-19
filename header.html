@@ -33,10 +33,15 @@
   margin-top:-5px;       /* remove extra top margin */
   padding: 10px 0;      /* smaller vertical padding */
 }
+.buttons.half-bg > .buttons {
+  width: 90%;
+  margin: 0 auto;
+}
 
 .buttons.half-bg {
   margin-bottom: 0; 
   padding-bottom: 0;
+  width: 100%;
 }
 
 .mobile-wrapper {
@@ -82,19 +87,19 @@
   position: relative;
   z-index: 1;
 }
-.buttons.half-bg::before {
+    .buttons.half-bg::before {
   content: "";
   position: absolute;
+  left: 50%;
   bottom: 20px;
-  left: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  transform: translateX(-50%);
   width: 100%;
-  height: 46%;          
+  height: 46%;
   background: #e3f1ff;
   border-radius: 20px;
   z-index: 0;
 }
+
     .buttons.half-bg1::before {
   content: "";
   position: absolute;
@@ -640,6 +645,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
