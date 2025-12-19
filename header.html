@@ -199,6 +199,10 @@
 }
 
 
+/* Last row: same style, just 3 buttons */
+.special-buttons .buttons {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .btn:hover .circle {
   transform: translateY(-4px);
@@ -440,10 +444,7 @@
       transform: translateX(0);
     }
 
-    .buttons-center {
-  grid-template-columns: repeat(3, auto);
-  justify-content: center;
-}
+    
 
     .sidebar.active {
       left: 0;
@@ -463,24 +464,9 @@
       z-index: 900;
     }
     
-.special-buttons {
-  margin-top: -10px; 
-}
 
-.special-buttons .buttons {
-  justify-content: center;
-  column-gap: 20px;
-}
-    /* ONLY for the last three buttons */
-.special-buttons .buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  justify-items: center;
-  gap: 24px;
-  width: fit-content;
-  margin: 0 auto;
-}
+
+.
 
 
     .overlay.active {
@@ -637,6 +623,7 @@
 
 </body>
 </html>
+
 
 
 
