@@ -17,89 +17,52 @@
     }
 
     .simorgh-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1px;   /* ↓ very small distance */
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0px;   /* remove extra space between logo and text */
+    }
 
-    
-        
-    
-
-
-    
-.logo {
-    
-    width: 75vw;          /* VERY big */
-    max-width: 280px;     /* strong presence */
-    margin-bottom: 0;
-    height: auto;
-    
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;    /* was 190px */
-
- 
-}
-
-.text {
-     width: 40vw;          /* smaller */
-    max-width: 160px;    /* was 260px */
-    opacity: 0;
-     position: relative;
-    top: -8px;  
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 1s;
-}
-
-/* 375px */
-@media (min-width: 375px) {
     .logo {
-        width: 60vw;
+        width: 75vw;
+        max-width: 280px;
+        margin-bottom: 0;
+        height: auto;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out forwards;
     }
+
     .text {
-        width: 38vw;
+        width: 40vw;
+        max-width: 160px;
+        opacity: 0;
+        position: relative;
+        top: -10px;   /* move text up closer to logo */
+        animation: fadeIn 1.5s ease-out forwards;
+        animation-delay: 1s;
     }
-}
 
-
-/* 390px */
-@media (min-width: 390px) {
-     .logo {
-        width: 58vw;
+    /* Responsive adjustments */
+    @media (min-width: 375px) {
+        .logo { width: 60vw; }
+        .text { width: 38vw; top: -8px; }
     }
-    .text {
-        width: 36vw;
+
+    @media (min-width: 390px) {
+        .logo { width: 58vw; }
+        .text { width: 36vw; top: -8px; }
     }
-}
 
-
-/* 412px */
-@media (min-width: 412px) {
-   .logo {
-        width: 55vw;
-        max-width: 300px;
+    @media (min-width: 412px) {
+        .logo { width: 55vw; max-width: 300px; }
+        .text { width: 34vw; top: -6px; }
     }
-    .text {
-        width: 34vw;
+
+    @media (min-width: 600px) {
+        .logo { width: 300px; }
+        .text { width: 150px; top: -5px; }
     }
-}
-
-
-
-/* Tablets & up */
-@media (min-width: 600px) {
-    .logo {
-        width: 300px;
-    }
-    .text {
-        width: 150px;
-    }
-}
-
-
-
 
     @keyframes fadeIn {
         from {
@@ -111,40 +74,17 @@
             transform: translateY(0);
         }
     }
-</style>
-
+    </style>
 </head>
 <body>
     <div class="simorgh-container">
         <img src="images/simorgh.png" alt="لوگوی سیمرغ" class="logo">
-        <img src="images/03(3).png" alt=" سیمرغ" class="text">
+        <img src="images/03(3).png" alt="سیمرغ" class="text">
     </div>
     <script>
-  setTimeout(() => {
-    window.location.href = 'header.html';
-  }, 4000);
-</script>
+        setTimeout(() => {
+            window.location.href = 'header.html';
+        }, 4000);
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
