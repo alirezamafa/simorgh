@@ -481,7 +481,7 @@ html, body {
       left: 0;
       width: 200px;
       height: 100%;
-      background: #000;
+      background: #FFF;
       box-shadow: 2px 0 10px rgba(0,0,0,0.15);
       padding: 20px;
       transform: translateX(-100%); /* کاملاً مخفی */
@@ -514,15 +514,21 @@ html, body {
   margin-bottom: 14px;
 }
 .sidebar-menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex;          /* :fire: puts image + text in same row */
+  align-items: center;    /* :fire: vertical center */
+  gap: 12px;              /* space between icon and text */
+  white-space: nowrap;    /* :fire: prevents text breaking to next line */
+}
+    .sidebar-menu span {
+  font-size: 14px;
+  line-height: 1;
 }
 
 .sidebar-img {
   width: 22px;
   height: 22px;
   object-fit: contain;
+  flex-shrink: 0;         /* :fire: prevents icon shrinking */
 }
 
 .sidebar-menu a {
@@ -788,6 +794,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
