@@ -23,64 +23,65 @@
         text-align: center;
     }
 
-    /* Mobile-first base (small phones ~360px) */
+    
+.logo {
+    width: 45vw;          /* was 40vw */
+    max-width: 160px;     /* was 140px */
+    height: auto;
+    margin-bottom: 6px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.text {
+    width: 55vw;          /* was 60vw */
+    max-width: 230px;     /* was 260px */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* 375px */
+@media (min-width: 375px) {
     .logo {
-        width: 40vw;
-        max-width: 140px;
-        height: auto;
-        margin-bottom: 6px;
-        opacity: 0;
-        animation: fadeIn 1.5s ease-out forwards;
+        width: 42vw;      /* was 38vw */
     }
-
     .text {
-        width: 60vw;
-        max-width: 260px;
-        opacity: 0;
-        animation: fadeIn 1.5s ease-out forwards;
-        animation-delay: 1s;
+        width: 52vw;      /* was 58vw */
     }
+}
 
-    /* 375px (iPhone SE / 12 mini) */
-    @media (min-width: 375px) {
-        .logo {
-            width: 38vw;
-        }
-        .text {
-            width: 58vw;
-        }
+/* 390px */
+@media (min-width: 390px) {
+    .logo {
+        width: 40vw;      /* was 36vw */
     }
+    .text {
+        width: 50vw;      /* was 55vw */
+    }
+}
 
-    /* 390px (iPhone 12 / 13 / 14) */
-    @media (min-width: 390px) {
-        .logo {
-            width: 36vw;
-        }
-        .text {
-            width: 55vw;
-        }
+/* 412px */
+@media (min-width: 412px) {
+    .logo {
+        width: 38vw;      /* was 34vw */
+        max-width: 170px; /* was 150px */
     }
+    .text {
+        width: 48vw;      /* was 52vw */
+    }
+}
 
-    /* 412px (Pixel / large Android phones) */
-    @media (min-width: 412px) {
-        .logo {
-            width: 34vw;
-            max-width: 150px;
-        }
-        .text {
-            width: 52vw;
-        }
+/* Tablets & up */
+@media (min-width: 600px) {
+    .logo {
+        width: 170px;     /* was 150px */
     }
+    .text {
+        width: 250px;     /* was 280px */
+    }
+}
 
-    /* Tablets & up */
-    @media (min-width: 600px) {
-        .logo {
-            width: 150px;
-        }
-        .text {
-            width: 280px;
-        }
-    }
 
     @keyframes fadeIn {
         from {
@@ -108,6 +109,7 @@
 </body>
 
 </html>
+
 
 
 
