@@ -16,32 +16,39 @@
         overflow: hidden;
     }
 
-    .simorgh-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0px;   /* remove extra space between logo and text */
-    }
 
-    .logo {
-        width: 75vw;
-        max-width: 280px;
-        margin-bottom: 0;
-        height: auto;
-        opacity: 0;
-        animation: fadeIn 1.5s ease-out forwards;
-    }
+        .simorgh-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+}
 
-    .text {
-        width: 40vw;
-        max-width: 160px;
-        opacity: 0;
-        position: relative;
-        top: -10px;   /* move text up closer to logo */
-        animation: fadeIn 1.5s ease-out forwards;
-        animation-delay: 1s;
-    }
+
+
+        .logo {
+    display: block;              /* 🔥 important */
+    width: 75vw;
+    max-width: 280px;
+    margin: 0;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+
+
+        .text {
+    display: block;              /* 🔥 important */
+    width: 40vw;
+    max-width: 160px;
+    margin-top: -6px;            /* 🔥 stick to logo */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
 
     /* Responsive adjustments */
     @media (min-width: 375px) {
@@ -88,3 +95,4 @@
     </script>
 </body>
 </html>
+
