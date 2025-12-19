@@ -27,10 +27,11 @@
     
 .logo {
     
-     width: 60vw;
-    max-width: 210px;
+    width: 65vw;          /* bigger */
+    max-width: 230px;     /* bigger */
+    margin-bottom: 0;
     height: auto;
-    margin-bottom: 1px;   /* ↓ smaller gap */
+    
     opacity: 0;
     animation: fadeIn 1.5s ease-out forwards;    /* was 190px */
 
@@ -38,8 +39,8 @@
 }
 
 .text {
-     width: 45vw;          /* was 50vw */
-    max-width: 180px;     /* was 260px */
+     width: 40vw;          /* smaller */
+    max-width: 160px;    /* was 260px */
     opacity: 0;
     animation: fadeIn 1.5s ease-out forwards;
     animation-delay: 1s;
@@ -48,44 +49,48 @@
 /* 375px */
 @media (min-width: 375px) {
     .logo {
-        width: 48vw;      /* was 44vw */
+        width: 52vw;
     }
     .text {
-        width: 44vw;      /* was 48vw */
+        width: 38vw;
     }
 }
+
 
 /* 390px */
 @media (min-width: 390px) {
     .logo {
-        width: 46vw;      /* was 43vw */
+        width: 50vw;
     }
     .text {
-        width: 42vw;      /* was 47vw */
+        width: 36vw;
     }
 }
+
 
 /* 412px */
 @media (min-width: 412px) {
     .logo {
-        width: 44vw;      
-        max-width: 205px; /* was 185px */
+        width: 48vw;
+        max-width: 225px;
     }
     .text {
-        width: 40vw;      
+        width: 34vw;
     }
 }
+
 
 
 /* Tablets & up */
 @media (min-width: 600px) {
     .logo {
-        width: 205px;     /* was 185px */
+        width: 225px;
     }
     .text {
-        width: 200px;     /* was 220px */
+        width: 150px;
     }
 }
+
 
 
 
@@ -115,6 +120,7 @@
 </body>
 
 </html>
+
 
 
 
