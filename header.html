@@ -203,6 +203,17 @@ html, body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+            .circle4 {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: #a400e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 .circle1 img {
   width: 120px;
   height: 120px;
@@ -211,6 +222,11 @@ html, body {
     .circle2 img {
   width: 120px;
   height: 120px;
+  object-fit: contain;
+}
+       .circle4 img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 .circle img {
@@ -623,12 +639,12 @@ html, body {
   <div class="buttons">
 
     <a href="page1.html" class="btn">
-      <div class="circle3"><img src="images/prof.svg"></div>
+      <div class="circle4"><img src="images/prof.svg"></div>
       <span>پروفایل</span>
     </a>
 
     <a href="page1.html" class="btn">
-      <div class="circle3"><img src="images/inter.svg"></div>
+      <div class="circle4"><img src="images/inter.svg"></div>
       <span>علاقه‌مندی</span>
     </a>
 
@@ -651,6 +667,7 @@ html, body {
 
 </body>
 </html>
+
 
 
 
